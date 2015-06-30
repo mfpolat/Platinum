@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Platinum</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_demand_list">DemandListActivity</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="title_activity_demand_detail">DemandDetailActivity</string>
+</resources>
