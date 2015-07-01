@@ -8,4 +8,7 @@
     <string name="title_activity_settings">SettingsActivity</string>
     <string name="title_activity_profile">ProfileActivity</string>
     <string name="title_activity_demand_detail">DemandDetailActivity</string>
+    <string name="title_activity_notifications">NotificationsActivity</string>
+    <string name="title_activity_driver_status">DriverStatusActivity</string>
+    <string name="title_activity_info">InfoActivity</string>
 </resources>

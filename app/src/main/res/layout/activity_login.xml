@@ -1,9 +1,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.cetur.platinum.LoginActivity">
 
     <LinearLayout
@@ -11,20 +14,49 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:orientation="vertical">
-        <com.iangclifton.android.floatlabel.FloatLabel
-            android:id="@+id/loginActivityMailET"
+
+        <com.wrapp.floatlabelededittext.FloatLabeledEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/loginActivityMailET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="E-Posta Adresi" />
+        </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+        <com.wrapp.floatlabelededittext.FloatLabeledEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/loginActivityPassWordET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Parola" />
+        </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/ripple"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="E-Posta Adresi">
+            android:layout_marginTop="10dp"
+            app:mrl_rippleAlpha="0.1"
+            app:mrl_rippleColor="#ff0000"
+            app:mrl_rippleOverlay="true">
 
-        </com.iangclifton.android.floatlabel.FloatLabel>
+            <TextView
+                android:id="@+id/loginActivityLoginTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Giriş" />
 
-        <com.iangclifton.android.floatlabel.FloatLabel
-            android:id="@+id/loginActivityPassWordET"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Parola">
-
-        </com.iangclifton.android.floatlabel.FloatLabel>
+        </com.balysv.materialripple.MaterialRippleLayout>
     </LinearLayout>
 </RelativeLayout>

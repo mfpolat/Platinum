@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.cetur.platinum" >
+    package="com.cetur.platinum">
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".SplashActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,24 +19,36 @@
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:label="@string/title_activity_login" >
-        </activity>
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".DemandListActivity"
-            android:label="@string/title_activity_demand_list" >
-        </activity>
+            android:label="@string/title_activity_demand_list"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings" >
-        </activity>
+            android:label="@string/title_activity_settings"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ProfileActivity"
-            android:label="@string/title_activity_profile" >
-        </activity>
+            android:label="@string/title_activity_profile"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".DemandDetailActivity"
-            android:label="@string/title_activity_demand_detail" >
-        </activity>
+            android:label="@string/title_activity_demand_detail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NotificationsActivity"
+            android:label="@string/title_activity_notifications"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".DriverStatusActivity"
+            android:label="@string/title_activity_driver_status"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".InfoActivity"
+            android:label="@string/title_activity_info"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
