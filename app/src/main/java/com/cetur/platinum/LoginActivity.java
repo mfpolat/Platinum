@@ -9,6 +9,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import org.ksoap2.transport.HttpTransportSE;
+
+import java.net.Proxy;
+
 
 public class LoginActivity extends ActionBarActivity implements View.OnClickListener {
 
@@ -55,5 +59,12 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
 
     private void checkFields() {
         startActivity(new Intent(LoginActivity.this,DemandListActivity.class));
+    }
+
+    private final HttpTransportSE getHttpTransportSE() {
+        HttpTransportSE ht = new HttpTransportSE(Proxy.NO_PROXY,Constants.SERVICE_BASE_URL,60000);
+        ht.debug = true;
+        ht.setXmlVersionTag("<!--?xml version=\"1.0\" encoding= \"UTF-8\" ?-->");
+        return ht;
     }
 }

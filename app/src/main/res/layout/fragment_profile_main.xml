@@ -1,0 +1,145 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.cetur.platinum.ProfileMainFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/icon_empty_image"
+
+                app:border_width="0dp" />
+
+            <TextView
+                android:id="@+id/profileMainFragmentNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_name"
+                android:gravity="center"
+                android:text="Osman Yıldız"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"></View>
+
+            <TextView
+                android:id="@+id/profileMainFragmentMailTV"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_mail"
+                android:gravity="center"
+                android:text="osman.yildiz@cetur.com"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"></View>
+
+            <TextView
+                android:id="@+id/profileMainFragmentBirthDateTV"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_date"
+                android:gravity="center"
+                android:text="16.05.1988"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"></View>
+
+            <TextView
+                android:id="@+id/profileMainFragmentPhoneTV"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_phone"
+                android:gravity="center"
+                android:text="0566 254 8796"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"></View>
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mrl_rippleAlpha="0.1"
+                app:mrl_rippleColor="#ff0000"
+                app:mrl_rippleOverlay="true">
+
+                <TextView
+                    android:id="@+id/profileMainFragmentDriverLicenceTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/icon_image"
+                    android:drawableRight="@mipmap/icon_next"
+                    android:gravity="center_vertical"
+                    android:paddingRight="10dp"
+                    android:text="Sürücü Belgesi"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"></View>
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mrl_rippleAlpha="0.1"
+                app:mrl_rippleColor="#ff0000"
+                app:mrl_rippleOverlay="true">
+
+                <TextView
+                    android:id="@+id/profileMainFragmentSrc2LicenceTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/icon_image"
+                    android:drawableRight="@mipmap/icon_next"
+                    android:gravity="center_vertical"
+                    android:paddingRight="10dp"
+                    android:text="SRC 2 Belgesi"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"></View>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
