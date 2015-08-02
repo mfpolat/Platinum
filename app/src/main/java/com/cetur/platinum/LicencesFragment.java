@@ -14,7 +14,6 @@ public class LicencesFragment extends Fragment {
     public static LicencesFragment newInstance() {
         LicencesFragment fragment = new LicencesFragment();
         Bundle args = new Bundle();
-
         fragment.setArguments(args);
         return fragment;
     }

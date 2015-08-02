@@ -25,6 +25,7 @@
                 app:border_width="0dp" />
 
             <TextView
+
                 android:id="@+id/profileMainFragmentNameTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -32,7 +33,7 @@
                 android:gravity="center"
                 android:text="Osman Yıldız"
                 android:textColor="@android:color/black"
-                android:textSize="20sp" />
+                android:textSize="18dp" />
 
             <View
                 android:layout_width="match_parent"
@@ -48,7 +49,7 @@
                 android:gravity="center"
                 android:text="osman.yildiz@cetur.com"
                 android:textColor="@android:color/black"
-                android:textSize="20sp" />
+                android:textSize="18dp" />
 
             <View
                 android:layout_width="match_parent"
@@ -64,7 +65,7 @@
                 android:gravity="center"
                 android:text="16.05.1988"
                 android:textColor="@android:color/black"
-                android:textSize="20sp" />
+                android:textSize="18dp" />
 
             <View
                 android:layout_width="match_parent"
@@ -80,7 +81,7 @@
                 android:gravity="center"
                 android:text="0566 254 8796"
                 android:textColor="@android:color/black"
-                android:textSize="20sp" />
+                android:textSize="18dp" />
 
             <View
                 android:layout_width="match_parent"
@@ -104,7 +105,7 @@
                     android:paddingRight="10dp"
                     android:text="Sürücü Belgesi"
                     android:textColor="@android:color/black"
-                    android:textSize="20sp" />
+                    android:textSize="18dp" />
 
 
             </com.balysv.materialripple.MaterialRippleLayout>
@@ -131,7 +132,7 @@
                     android:paddingRight="10dp"
                     android:text="SRC 2 Belgesi"
                     android:textColor="@android:color/black"
-                    android:textSize="20sp" />
+                    android:textSize="18dp" />
 
 
             </com.balysv.materialripple.MaterialRippleLayout>

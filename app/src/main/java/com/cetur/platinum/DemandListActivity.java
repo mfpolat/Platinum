@@ -2,6 +2,7 @@ package com.cetur.platinum;
 
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.Typeface;
 import android.os.PersistableBundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
@@ -15,12 +16,15 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 
 public class DemandListActivity extends ActionBarActivity implements View.OnClickListener {
 
     private ActionBarDrawerToggle actionBarDrawerToggle;
     private DrawerLayout drawerLayout;
-    private TextView leftMenuDemandsTV, leftMenuDriverStatusTV, leftMenuNotificationsTV, leftMenuSettingsTV, leftMenuInfoTV, leftMenuProfileTV;
+    private TextView leftMenuDemandsTV, leftMenuDriverStatusTV, leftMenuNotificationsTV, leftMenuSettingsTV, leftMenuInfoTV, leftMenuProfileTV,leftMenuUserNameTV,leftMenuUserMailTV;
+    private CircleImageView leftMenuUserPicIV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +78,22 @@ public class DemandListActivity extends ActionBarActivity implements View.OnClic
         leftMenuInfoTV.setOnClickListener(this);
         leftMenuProfileTV = (TextView) findViewById(R.id.leftMenuProfileTV);
         leftMenuProfileTV.setOnClickListener(this);
+
+        leftMenuUserNameTV = (TextView)findViewById(R.id.leftMenuUserNameTV);
+        leftMenuUserMailTV =(TextView)findViewById(R.id.leftMenuUserMailTV);
+        leftMenuUserPicIV =(CircleImageView)findViewById(R.id.leftMenuUserPicIV);
+        Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Helvetica.ttf");
+        leftMenuDemandsTV.setTypeface(face);
+        leftMenuDriverStatusTV.setTypeface(face);
+        leftMenuNotificationsTV.setTypeface(face);
+        leftMenuSettingsTV.setTypeface(face);
+        leftMenuInfoTV.setTypeface(face);
+        leftMenuProfileTV.setTypeface(face);
+        leftMenuUserMailTV.setTypeface(face);
+        leftMenuUserNameTV.setTypeface(face);
+
+        leftMenuUserMailTV.setText(AppController.getInstance().getUser().getMail());
+        leftMenuUserNameTV.setText(AppController.getInstance().getUser().getName() + " "+AppController.getInstance().getUser().getSurname());
     }
 
 

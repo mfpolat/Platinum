@@ -17,4 +17,12 @@
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_app">Uygulama Hakkında</string>
+    <string name="loading">Yükleniyor</string>
+    <string name="error">Hata</string>
+    <string name="okey">Tamam</string>
+    <string name="generel_error">Servise ulaşırken hata meydana geldi.</string>
+    <string name="forget_pass">Parolanı mı unuttun ?</string>
+    <string name="forget_pass_desc">Parolanızı unuttuysanız E-Posta adersinize göndermek için adresi giriniz!</string>
+    <string name="send">Gönder</string>
 </resources>

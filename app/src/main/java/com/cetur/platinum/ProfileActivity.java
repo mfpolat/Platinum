@@ -1,5 +1,6 @@
 package com.cetur.platinum;
 
+import android.graphics.Typeface;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 
 
 public class ProfileActivity extends ActionBarActivity {
@@ -30,7 +32,11 @@ public class ProfileActivity extends ActionBarActivity {
 
     private void setToolbar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarMain);
-        toolbar.setTitle(getString(R.string.profile));
+        TextView toolbarMainHeaderTV =(TextView)toolbar.findViewById(R.id.toolbarMainHeaderTV);
+        Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Helvetica.ttf");
+        toolbarMainHeaderTV.setTypeface(face);
+        toolbarMainHeaderTV.setText(getString(R.string.profile));
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);

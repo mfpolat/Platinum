@@ -1,6 +1,7 @@
 package com.cetur.platinum;
 
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -38,6 +39,7 @@ public class ProfileMainFragment extends Fragment implements View.OnClickListene
     }
 
     private void initViews() {
+
         profileMainFragmentNameTV =(TextView)mView.findViewById(R.id.profileMainFragmentNameTV);
         profileMainFragmentMailTV =(TextView)mView.findViewById(R.id.profileMainFragmentMailTV);
         profileMainFragmentBirthDateTV =(TextView)mView.findViewById(R.id.profileMainFragmentBirthDateTV);
@@ -46,6 +48,19 @@ public class ProfileMainFragment extends Fragment implements View.OnClickListene
         profileMainFragmentDriverLicenceTV.setOnClickListener(this);
         profileMainFragmentSrc2LicenceTV =(TextView)mView.findViewById(R.id.profileMainFragmentSrc2LicenceTV);
         profileMainFragmentSrc2LicenceTV.setOnClickListener(this);
+
+        Typeface face = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Helvetica.ttf");
+        profileMainFragmentNameTV.setTypeface(face);
+        profileMainFragmentMailTV.setTypeface(face);
+        profileMainFragmentBirthDateTV.setTypeface(face);
+        profileMainFragmentPhoneTV.setTypeface(face);
+        profileMainFragmentDriverLicenceTV.setTypeface(face);
+        profileMainFragmentSrc2LicenceTV.setTypeface(face);
+
+        profileMainFragmentNameTV.setText(AppController.getInstance().getUser().getName() + " " + AppController.getInstance().getUser().getSurname());
+        profileMainFragmentMailTV.setText(AppController.getInstance().getUser().getMail());
+        profileMainFragmentPhoneTV.setText(AppController.getInstance().getUser().getPhone1());
+
     }
 
     @Override
