@@ -3,28 +3,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-  android:background="@mipmap/login"
     tools:context="com.cetur.platinum.LoginActivity">
 
-    <ImageView
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:src="@mipmap/logo"/>
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:src="@mipmap/login_bg"
+    android:scaleType="centerCrop"/>
+    <View
+        android:id="@+id/dummy"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true">
+
+    </View>
     <LinearLayout
-        android:layout_marginLeft="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/dummy"
+        android:layout_marginTop="-50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:orientation="vertical">
 
         <com.wrapp.floatlabelededittext.FloatLabeledEditText
             android:layout_width="match_parent"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:background="#0288D1"
             android:layout_height="wrap_content">
 
             <EditText
-                android:gravity="center"
+                android:padding="10dp"
+
                 android:id="@+id/loginActivityMailET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -32,11 +42,15 @@
         </com.wrapp.floatlabelededittext.FloatLabeledEditText>
 
         <com.wrapp.floatlabelededittext.FloatLabeledEditText
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
             android:layout_width="match_parent"
+            android:background="#0288D1"
             android:layout_height="wrap_content">
 
             <EditText
-                android:gravity="center"
+                android:padding="10dp"
                 android:id="@+id/loginActivityPassWordET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -49,22 +63,23 @@
             android:layout_width="wrap_content"
             android:layout_gravity="center"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             app:mrl_rippleAlpha="0.1"
             app:mrl_rippleColor="#ff0000"
             app:mrl_rippleOverlay="true">
 
             <TextView
-                android:paddingRight="60dp"
-                android:paddingLeft="60dp"
+                android:paddingRight="80dp"
+                android:paddingLeft="80dp"
                 android:paddingTop="10dp"
+                android:textColor="#3c90be"
                 android:paddingBottom="10dp"
                 android:textSize="20sp"
                 android:id="@+id/loginActivityLoginTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@color/colorPrimary"
+                android:background="@android:color/white"
                 android:gravity="center"
                 android:text="Giriş" />
 
@@ -85,7 +100,7 @@
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:textSize="18sp"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="@android:color/white"
                 android:id="@+id/loginActivityForgetPassTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

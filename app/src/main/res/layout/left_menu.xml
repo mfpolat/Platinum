@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#B0BEC5">
+    android:background="#263238">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -61,19 +61,20 @@
             <com.balysv.materialripple.MaterialRippleLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 app:mrl_rippleAlpha="0.1"
                 app:mrl_rippleColor="#ff0000"
                 app:mrl_rippleOverlay="true">
 
                 <TextView
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@mipmap/talep"
                     android:id="@+id/leftMenuDemandsTV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:background="@android:color/white"
-                    android:gravity="left"
-                    android:padding="18dp"
+                    android:gravity="center_vertical"
                     android:text="Talepler"
                     android:textColor="@android:color/black"
                     android:textSize="18sp" />
@@ -82,7 +83,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.5dp"
                 android:background="@android:color/darker_gray"></View>
 
             <com.balysv.materialripple.MaterialRippleLayout
@@ -93,13 +94,16 @@
                 app:mrl_rippleOverlay="true">
 
                 <TextView
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@mipmap/durum"
                     android:id="@+id/leftMenuDriverStatusTV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="@android:color/white"
-                    android:gravity="left"
-                    android:padding="18dp"
+                    android:gravity="center_vertical"
                     android:text="Sürücü Durumu"
                     android:textColor="@android:color/black"
                     android:textSize="18sp" />
@@ -108,7 +112,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.5dp"
                 android:background="@android:color/darker_gray"></View>
 
             <com.balysv.materialripple.MaterialRippleLayout
@@ -119,13 +123,16 @@
                 app:mrl_rippleOverlay="true">
 
                 <TextView
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@mipmap/bildirim"
                     android:id="@+id/leftMenuNotificationsTV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="@android:color/white"
-                    android:gravity="left"
-                    android:padding="18dp"
+                    android:gravity="center_vertical"
                     android:text="Bildirimler"
                     android:textColor="@android:color/black"
                     android:textSize="18sp" />
@@ -134,7 +141,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.5dp"
                 android:background="@android:color/darker_gray"></View>
 
             <com.balysv.materialripple.MaterialRippleLayout
@@ -145,13 +152,16 @@
                 app:mrl_rippleOverlay="true">
 
                 <TextView
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@mipmap/profil"
                     android:id="@+id/leftMenuProfileTV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="@android:color/white"
-                    android:gravity="left"
-                    android:padding="18dp"
+                    android:gravity="center_vertical"
                     android:text="Profil"
                     android:textColor="@android:color/black"
                     android:textSize="18sp" />
@@ -160,7 +170,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.5dp"
                 android:background="@android:color/darker_gray"></View>
 
             <com.balysv.materialripple.MaterialRippleLayout
@@ -171,13 +181,16 @@
                 app:mrl_rippleOverlay="true">
 
                 <TextView
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@mipmap/settings"
                     android:id="@+id/leftMenuSettingsTV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="@android:color/white"
-                    android:gravity="left"
-                    android:padding="18dp"
+                    android:gravity="center_vertical"
                     android:text="Ayarlar"
                     android:textColor="@android:color/black"
                     android:textSize="18sp" />
@@ -186,7 +199,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.5dp"
                 android:background="@android:color/darker_gray"></View>
 
             <com.balysv.materialripple.MaterialRippleLayout
@@ -197,13 +210,16 @@
                 app:mrl_rippleOverlay="true">
 
                 <TextView
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@mipmap/appinfo"
                     android:id="@+id/leftMenuInfoTV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="@android:color/white"
-                    android:gravity="left"
-                    android:padding="18dp"
+                    android:gravity="center_vertical"
                     android:text="Hakkında"
                     android:textColor="@android:color/black"
                     android:textSize="18sp" />
@@ -212,7 +228,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.5dp"
                 android:background="@android:color/darker_gray"></View>
         </LinearLayout>
     </ScrollView>

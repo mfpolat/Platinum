@@ -3,6 +3,7 @@ package com.cetur.service;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
+import android.util.Log;
 
 import com.cetur.model.LoginResponse;
 import com.cetur.model.Person;
@@ -58,7 +59,9 @@ public class Network {
                 HttpTransportSE androidHttpTransport = new HttpTransportSE(Constants.SERVICE_BASE_URL);
                 androidHttpTransport.call(Constants.LOGIN_SERVICE_SOAP_ACTION, envelope);
                 SoapObject result = (SoapObject) envelope.bodyIn;
+
                 if (result != null) {
+                    Log.i("Network Response :   " ,result.toString());
                     //Get the first property and change the label text
                     SoapObject loginResult = (SoapObject) result.getProperty("loginResult");
                     response.setCode(loginResult.getProperty("code").toString());

@@ -1,12 +1,193 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context="com.cetur.platinum.DemandDetailActivity">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
+    <include layout="@layout/toolbar_main"></include>
+
+    <fragment
+        android:id="@+id/googleMapView"
+        class="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="56dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/googleMapView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:visibility="visible"
+                android:id="@+id/demandDetailActivityNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@mipmap/profil"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:text="Ercan Söker"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@android:color/black"></View>
+
+            <TextView
+                android:id="@+id/demandDetailActivityDateTV"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@mipmap/timer"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:text="26.02.2015 14:30"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@android:color/black"></View>
+
+            <TextView
+                android:id="@+id/demandDetailActivityFromTV"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@mipmap/locationred"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:text="Atatürk Hava limanı"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@android:color/black"></View>
+
+            <TextView
+                android:id="@+id/demandDetailActivityToTV"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@mipmap/locationtwo"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:text="Maslak"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@android:color/black"></View>
+
+            <TextView
+                android:id="@+id/demandDetailActivityPriceTV"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@mipmap/price"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:text="100 TL"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@android:color/black"></View>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    app:mrl_rippleAlpha="0.1"
+                    app:mrl_rippleColor="#ff0000"
+                    app:mrl_rippleOverlay="true">
+
+                    <TextView
+
+                        android:id="@+id/demandDetailActivityAcceptTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="40dp"
+                        android:paddingTop="10dp"
+                        android:text="Onayla"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:mrl_rippleAlpha="0.1"
+                    app:mrl_rippleColor="#ff0000"
+                    app:mrl_rippleOverlay="true">
+
+                    <TextView
+
+                        android:id="@+id/demandDetailActivityDenyTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="40dp"
+                        android:paddingTop="10dp"
+                        android:text="Reddet"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

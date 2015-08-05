@@ -8,13 +8,14 @@
 
 
     <TextView
+        android:id="@+id/infoActivityTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:textColor="@android:color/black"
         android:text="Platinium Sürücü uygulaması sürüm 1.0"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="66dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:gravity="center"/>
+        android:gravity="left"/>
 </RelativeLayout>

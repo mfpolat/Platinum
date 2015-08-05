@@ -1,5 +1,6 @@
 package com.cetur.platinum;
 
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -14,7 +15,7 @@ import com.rey.material.widget.Switch;
 
 public class DriverStatusActivity extends ActionBarActivity implements View.OnClickListener, Switch.OnCheckedChangeListener {
 
-    private TextView driverStatusActivityStatusOtherTV;
+    private TextView driverStatusActivityStatusOtherTV,driverStatusActivityAvailableTV,driverStatusActivityTrafficTV,driverStatusActivityServiceTV;
     private Switch driverStatusActivityStatusOkSW, driverStatusActivityStatusInTrafficSW, driverStatusActivityStatusInRepairSW;
 
     @Override
@@ -35,6 +36,17 @@ public class DriverStatusActivity extends ActionBarActivity implements View.OnCl
         driverStatusActivityStatusInTrafficSW.setOnCheckedChangeListener(this);
         driverStatusActivityStatusOkSW = (Switch) findViewById(R.id.driverStatusActivityStatusOkSW);
         driverStatusActivityStatusOkSW.setOnCheckedChangeListener(this);
+
+        driverStatusActivityAvailableTV =(TextView)findViewById(R.id.driverStatusActivityAvailableTV);
+        driverStatusActivityTrafficTV =(TextView)findViewById(R.id.driverStatusActivityTrafficTV);
+        driverStatusActivityServiceTV =(TextView)findViewById(R.id.driverStatusActivityServiceTV);
+        Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Helvetica.ttf");
+
+        driverStatusActivityStatusOtherTV.setTypeface(face);
+        driverStatusActivityAvailableTV.setTypeface(face);
+        driverStatusActivityTrafficTV.setTypeface(face);
+        driverStatusActivityServiceTV.setTypeface(face);
+
     }
 
     private void setToolbar() {

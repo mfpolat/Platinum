@@ -13,24 +13,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/toolbarMain"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="56dp"
         android:orientation="vertical">
 
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp">
+            android:layout_marginLeft="16dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
 
             <TextView
-
+                android:id="@+id/driverStatusActivityAvailableTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@mipmap/statusok"
+                android:drawableLeft="@mipmap/available"
                 android:gravity="center"
                 android:text="Uygun"
                 android:textColor="@android:color/black"
-                android:textSize="25sp" />
+                android:textSize="18sp" />
 
             <com.rey.material.widget.Switch
                 android:id="@+id/driverStatusActivityStatusOkSW"
@@ -41,30 +43,36 @@
                 android:layout_centerVertical="true"
                 android:layout_marginRight="5dp"
                 android:checked="false"
-                android:gravity="center" />
+                android:gravity="center"
+                app:sw_trackColor="@drawable/switch_color_state" />
         </RelativeLayout>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="0.5dp"
             android:background="@android:color/darker_gray"></View>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp">
+            android:layout_marginLeft="16dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
 
             <TextView
+                android:id="@+id/driverStatusActivityTrafficTV"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@mipmap/status_in_traffic"
+                android:drawableLeft="@mipmap/traffic"
                 android:gravity="center"
                 android:text="Trafikte"
                 android:textColor="@android:color/black"
-                android:textSize="25sp" />
+                android:textSize="18sp" />
 
             <com.rey.material.widget.Switch
                 android:id="@+id/driverStatusActivityStatusInTrafficSW"
+
                 style="@style/Material.Widget.Switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -72,27 +80,32 @@
                 android:layout_centerVertical="true"
                 android:layout_marginRight="5dp"
                 android:checked="false"
-                android:gravity="center" />
+                android:gravity="center"
+                app:sw_trackColor="@drawable/switch_color_state" />
         </RelativeLayout>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="0.5dp"
             android:background="@android:color/darker_gray"></View>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp">
+            android:layout_marginLeft="16dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
 
             <TextView
+                android:id="@+id/driverStatusActivityServiceTV"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@mipmap/status_in_repair"
+                android:drawableLeft="@mipmap/service"
                 android:gravity="center"
                 android:text="Servis"
                 android:textColor="@android:color/black"
-                android:textSize="25sp" />
+                android:textSize="18sp" />
 
             <com.rey.material.widget.Switch
                 android:id="@+id/driverStatusActivityStatusInRepairSW"
@@ -103,17 +116,20 @@
                 android:layout_centerVertical="true"
                 android:layout_marginRight="5dp"
                 android:checked="false"
-                android:gravity="center" />
+                android:gravity="center"
+                app:sw_trackColor="@drawable/switch_color_state" />
         </RelativeLayout>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="0.5dp"
             android:background="@android:color/darker_gray"></View>
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
 
             <com.balysv.materialripple.MaterialRippleLayout
                 android:id="@+id/ripple"
@@ -127,12 +143,12 @@
                     android:id="@+id/driverStatusActivityStatusOtherTV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@mipmap/status_other"
+                    android:drawableLeft="@mipmap/comment"
                     android:gravity="center_vertical"
                     android:paddingLeft="16dp"
                     android:text="Özel Nedenler"
                     android:textColor="@android:color/black"
-                    android:textSize="25sp" />
+                    android:textSize="18sp" />
             </com.balysv.materialripple.MaterialRippleLayout>
 
 
@@ -140,7 +156,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="0.5dp"
             android:background="@android:color/darker_gray"></View>
     </LinearLayout>
 </RelativeLayout>

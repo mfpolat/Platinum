@@ -12,12 +12,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/toolbarMain"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="56dp"
         android:orientation="vertical">
 
         <com.balysv.materialripple.MaterialRippleLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
             app:mrl_rippleAlpha="0.1"
             app:mrl_rippleColor="#ff0000"
             app:mrl_rippleOverlay="true">
@@ -26,22 +28,24 @@
                 android:id="@+id/settingsActivityFeedbackTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@mipmap/icon_feedback"
+                android:drawableLeft="@mipmap/bildirim"
                 android:gravity="center_vertical"
                 android:paddingLeft="16dp"
                 android:text="Geri Bildirim"
                 android:textColor="@android:color/black"
-                android:textSize="25sp" />
+                android:textSize="18sp" />
         </com.balysv.materialripple.MaterialRippleLayout>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="0.5dp"
             android:background="@android:color/darker_gray"></View>
 
         <com.balysv.materialripple.MaterialRippleLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
             app:mrl_rippleAlpha="0.1"
             app:mrl_rippleColor="#ff0000"
             app:mrl_rippleOverlay="true">
@@ -50,22 +54,24 @@
                 android:id="@+id/settingsActivityTermsOfUseTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@mipmap/icon_terms_of_use"
+                android:drawableLeft="@mipmap/kullanimkosullari"
                 android:gravity="center_vertical"
                 android:paddingLeft="16dp"
                 android:text="Kullanım Koşulları"
                 android:textColor="@android:color/black"
-                android:textSize="25sp" />
+                android:textSize="18sp" />
         </com.balysv.materialripple.MaterialRippleLayout>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="0.5dp"
             android:background="@android:color/darker_gray"></View>
 
         <com.balysv.materialripple.MaterialRippleLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="10dp"
             app:mrl_rippleAlpha="0.1"
             app:mrl_rippleColor="#ff0000"
             app:mrl_rippleOverlay="true">
@@ -74,17 +80,17 @@
                 android:id="@+id/settingsActivityLogoutTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@mipmap/icon_logout"
+                android:drawableLeft="@mipmap/oturumkapat"
                 android:gravity="center_vertical"
                 android:paddingLeft="16dp"
                 android:text="Oturumu Kapat"
                 android:textColor="@android:color/black"
-                android:textSize="25sp" />
+                android:textSize="18sp" />
         </com.balysv.materialripple.MaterialRippleLayout>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="0.5dp"
             android:background="@android:color/darker_gray"></View>
 
     </LinearLayout>

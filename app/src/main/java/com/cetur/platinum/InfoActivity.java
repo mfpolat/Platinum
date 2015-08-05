@@ -1,10 +1,12 @@
 package com.cetur.platinum;
 
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 
 public class InfoActivity extends ActionBarActivity {
@@ -18,10 +20,16 @@ public class InfoActivity extends ActionBarActivity {
 
     private void initToolbar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarMain);
-        toolbar.setTitle(getString(R.string.about_app));
+        toolbar.setTitle("");
+        TextView toolbarHeader = (TextView) toolbar.findViewById(R.id.toolbarMainHeaderTV);
+        toolbarHeader.setText(getString(R.string.about_app));
+        Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Helvetica.ttf");
+        toolbarHeader.setTypeface(face);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
+        TextView infoActivityTV = (TextView) findViewById(R.id.infoActivityTV);
+        infoActivityTV.setTypeface(face);
     }
 
     @Override

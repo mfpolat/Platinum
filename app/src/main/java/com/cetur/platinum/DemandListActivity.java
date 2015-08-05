@@ -12,19 +12,26 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import com.cetur.model.Demand;
+
 import org.w3c.dom.Text;
+
+import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 
-public class DemandListActivity extends ActionBarActivity implements View.OnClickListener {
+public class DemandListActivity extends ActionBarActivity implements View.OnClickListener, AdapterView.OnItemClickListener {
 
     private ActionBarDrawerToggle actionBarDrawerToggle;
     private DrawerLayout drawerLayout;
-    private TextView leftMenuDemandsTV, leftMenuDriverStatusTV, leftMenuNotificationsTV, leftMenuSettingsTV, leftMenuInfoTV, leftMenuProfileTV,leftMenuUserNameTV,leftMenuUserMailTV;
+    private TextView leftMenuDemandsTV, leftMenuDriverStatusTV, leftMenuNotificationsTV, leftMenuSettingsTV, leftMenuInfoTV, leftMenuProfileTV, leftMenuUserNameTV, leftMenuUserMailTV;
     private CircleImageView leftMenuUserPicIV;
+    private ListView demandListActivityLV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,9 +86,9 @@ public class DemandListActivity extends ActionBarActivity implements View.OnClic
         leftMenuProfileTV = (TextView) findViewById(R.id.leftMenuProfileTV);
         leftMenuProfileTV.setOnClickListener(this);
 
-        leftMenuUserNameTV = (TextView)findViewById(R.id.leftMenuUserNameTV);
-        leftMenuUserMailTV =(TextView)findViewById(R.id.leftMenuUserMailTV);
-        leftMenuUserPicIV =(CircleImageView)findViewById(R.id.leftMenuUserPicIV);
+        leftMenuUserNameTV = (TextView) findViewById(R.id.leftMenuUserNameTV);
+        leftMenuUserMailTV = (TextView) findViewById(R.id.leftMenuUserMailTV);
+        leftMenuUserPicIV = (CircleImageView) findViewById(R.id.leftMenuUserPicIV);
         Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Helvetica.ttf");
         leftMenuDemandsTV.setTypeface(face);
         leftMenuDriverStatusTV.setTypeface(face);
@@ -92,8 +99,18 @@ public class DemandListActivity extends ActionBarActivity implements View.OnClic
         leftMenuUserMailTV.setTypeface(face);
         leftMenuUserNameTV.setTypeface(face);
 
-        leftMenuUserMailTV.setText(AppController.getInstance().getUser().getMail());
-        leftMenuUserNameTV.setText(AppController.getInstance().getUser().getName() + " "+AppController.getInstance().getUser().getSurname());
+//        leftMenuUserMailTV.setText(AppController.getInstance().getUser().getMail());
+//        leftMenuUserNameTV.setText(AppController.getInstance().getUser().getName() + " "+AppController.getInstance().getUser().getSurname());
+
+        demandListActivityLV = (ListView) findViewById(R.id.demandListActivityLV);
+        ArrayList<Demand> demands = new ArrayList<>();
+        for (int x = 0; x < 6; x++) {
+            Demand demand = new Demand();
+            demands.add(demand);
+        }
+        DemandListAdapter adapter = new DemandListAdapter(this, demands);
+        demandListActivityLV.setAdapter(adapter);
+        demandListActivityLV.setOnItemClickListener(this);
     }
 
 
@@ -180,5 +197,10 @@ public class DemandListActivity extends ActionBarActivity implements View.OnClic
 
     private void openDemandsList() {
         drawerLayout.closeDrawers();
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        startActivity(new Intent(this, DemandDetailActivity.class));
     }
 }

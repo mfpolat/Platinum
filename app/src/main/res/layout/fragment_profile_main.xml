@@ -20,16 +20,18 @@
                 android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:src="@mipmap/icon_empty_image"
+                android:src="@mipmap/profil"
 
                 app:border_width="0dp" />
 
             <TextView
-
+                android:layout_marginTop="10dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
                 android:id="@+id/profileMainFragmentNameTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@mipmap/icon_name"
+                android:drawableLeft="@mipmap/profil"
                 android:gravity="center"
                 android:text="Osman Yıldız"
                 android:textColor="@android:color/black"
@@ -37,15 +39,16 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.5dp"
                 android:background="@android:color/black"></View>
 
             <TextView
                 android:id="@+id/profileMainFragmentMailTV"
-
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@mipmap/icon_mail"
+                android:drawableLeft="@mipmap/email"
                 android:gravity="center"
                 android:text="osman.yildiz@cetur.com"
                 android:textColor="@android:color/black"
@@ -53,15 +56,16 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.5dp"
                 android:background="@android:color/black"></View>
 
             <TextView
                 android:id="@+id/profileMainFragmentBirthDateTV"
-
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@mipmap/icon_date"
+                android:drawableLeft="@mipmap/calendar"
                 android:gravity="center"
                 android:text="16.05.1988"
                 android:textColor="@android:color/black"
@@ -69,15 +73,16 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.5dp"
                 android:background="@android:color/black"></View>
 
             <TextView
                 android:id="@+id/profileMainFragmentPhoneTV"
-
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@mipmap/icon_phone"
+                android:drawableLeft="@mipmap/phone"
                 android:gravity="center"
                 android:text="0566 254 8796"
                 android:textColor="@android:color/black"
@@ -85,7 +90,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.5dp"
                 android:background="@android:color/black"></View>
 
             <com.balysv.materialripple.MaterialRippleLayout
@@ -96,11 +101,13 @@
                 app:mrl_rippleOverlay="true">
 
                 <TextView
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
                     android:id="@+id/profileMainFragmentDriverLicenceTV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@mipmap/icon_image"
-                    android:drawableRight="@mipmap/icon_next"
+                    android:drawableLeft="@mipmap/imageicon"
+                    android:drawableRight="@mipmap/openleft"
                     android:gravity="center_vertical"
                     android:paddingRight="10dp"
                     android:text="Sürücü Belgesi"
@@ -112,7 +119,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.5dp"
                 android:background="@android:color/black"></View>
 
             <com.balysv.materialripple.MaterialRippleLayout
@@ -123,11 +130,13 @@
                 app:mrl_rippleOverlay="true">
 
                 <TextView
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
                     android:id="@+id/profileMainFragmentSrc2LicenceTV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@mipmap/icon_image"
-                    android:drawableRight="@mipmap/icon_next"
+                    android:drawableLeft="@mipmap/imageicon"
+                    android:drawableRight="@mipmap/openleft"
                     android:gravity="center_vertical"
                     android:paddingRight="10dp"
                     android:text="SRC 2 Belgesi"
@@ -139,7 +148,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.5dp"
                 android:background="@android:color/black"></View>
         </LinearLayout>
     </ScrollView>

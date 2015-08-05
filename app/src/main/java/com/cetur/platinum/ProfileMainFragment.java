@@ -57,9 +57,9 @@ public class ProfileMainFragment extends Fragment implements View.OnClickListene
         profileMainFragmentDriverLicenceTV.setTypeface(face);
         profileMainFragmentSrc2LicenceTV.setTypeface(face);
 
-        profileMainFragmentNameTV.setText(AppController.getInstance().getUser().getName() + " " + AppController.getInstance().getUser().getSurname());
-        profileMainFragmentMailTV.setText(AppController.getInstance().getUser().getMail());
-        profileMainFragmentPhoneTV.setText(AppController.getInstance().getUser().getPhone1());
+//        profileMainFragmentNameTV.setText(AppController.getInstance().getUser().getName() + " " + AppController.getInstance().getUser().getSurname());
+//        profileMainFragmentMailTV.setText(AppController.getInstance().getUser().getMail());
+//        profileMainFragmentPhoneTV.setText(AppController.getInstance().getUser().getPhone1());
 
     }
 

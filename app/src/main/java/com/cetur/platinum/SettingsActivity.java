@@ -1,5 +1,6 @@
 package com.cetur.platinum;
 
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -27,6 +28,12 @@ public class SettingsActivity extends ActionBarActivity implements View.OnClickL
         settingsActivityTermsOfUseTV.setOnClickListener(this);
         settingsActivityFeedbackTV =(TextView)findViewById(R.id.settingsActivityFeedbackTV);
         settingsActivityFeedbackTV.setOnClickListener(this);
+
+        Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Helvetica.ttf");
+        settingsActivityLogoutTV.setTypeface(face);
+        settingsActivityTermsOfUseTV.setTypeface(face);
+        settingsActivityFeedbackTV.setTypeface(face);
+
     }
 
     private void setToolbar() {

@@ -7,16 +7,19 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
 
         <include layout="@layout/toolbar_main"></include>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="Main Content"
-            android:textSize="35sp" />
+        <ListView
+            android:layout_marginTop="56dp"
+            android:id="@+id/demandListActivityLV"
+            android:dividerHeight="0.5dp"
+            android:divider="@android:color/black"
+            android:layout_width="match_parent"
+            tools:listitem="@layout/demand_list_item"
+            android:layout_height="wrap_content"></ListView>
 
     </RelativeLayout>
 
