@@ -28,6 +28,8 @@ dependencies {
     compile 'com.github.rey5137:material:1.1.1'
     compile 'com.afollestad:material-dialogs:0.7.7.0'
     compile 'com.google.android.gms:play-services:6.5.+'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
     compile files('libs/ksoap2.jar')
     compile files('libs/gson-2.3.1.jar')
 }

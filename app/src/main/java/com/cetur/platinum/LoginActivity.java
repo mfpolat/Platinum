@@ -99,13 +99,13 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
     }
 
     private void checkFields() {
-        startActivity(new Intent(LoginActivity.this, DemandListActivity.class));
-//        String userName = loginActivityMailET.getText().toString();
-//        String passWord = loginActivityPassWordET.getText().toString();
-//        if (userName.isEmpty() || passWord.isEmpty())
-//            return;
-//        Network network = new Network();
-//        network.login(loginActivityMailET.getText().toString(), loginActivityPassWordET.getText().toString(), "false", this);
+//        startActivity(new Intent(LoginActivity.this, DemandListActivity.class));
+        String userName = loginActivityMailET.getText().toString();
+        String passWord = loginActivityPassWordET.getText().toString();
+        if (userName.isEmpty() || passWord.isEmpty())
+            return;
+        Network network = new Network();
+        network.login(loginActivityMailET.getText().toString(), loginActivityPassWordET.getText().toString(), "false", this);
 
     }
 

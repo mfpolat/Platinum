@@ -4,6 +4,7 @@ package com.cetur.platinum;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,9 +58,9 @@ public class ProfileMainFragment extends Fragment implements View.OnClickListene
         profileMainFragmentDriverLicenceTV.setTypeface(face);
         profileMainFragmentSrc2LicenceTV.setTypeface(face);
 
-//        profileMainFragmentNameTV.setText(AppController.getInstance().getUser().getName() + " " + AppController.getInstance().getUser().getSurname());
-//        profileMainFragmentMailTV.setText(AppController.getInstance().getUser().getMail());
-//        profileMainFragmentPhoneTV.setText(AppController.getInstance().getUser().getPhone1());
+        profileMainFragmentNameTV.setText(AppController.getInstance().getUser().getName() + " " + AppController.getInstance().getUser().getSurname());
+        profileMainFragmentMailTV.setText(AppController.getInstance().getUser().getMail());
+        profileMainFragmentPhoneTV.setText(AppController.getInstance().getUser().getPhone1());
 
     }
 
@@ -67,15 +68,19 @@ public class ProfileMainFragment extends Fragment implements View.OnClickListene
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.profileMainFragmentDriverLicenceTV:
-                openLicencesFragment();
+                openLicencesFragment(4);
                 break;
             case R.id.profileMainFragmentSrc2LicenceTV:
-                openLicencesFragment();
+                openLicencesFragment(5);
                 break;
         }
     }
 
-    private void openLicencesFragment() {
-
+    private void openLicencesFragment(int type) {
+        DocumentsFragment documentsFragment = DocumentsFragment.newInstance(type);
+        FragmentTransaction fragmentTransaction =getActivity(). getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.profileActivityMainContainerFL, documentsFragment);
+        fragmentTransaction.addToBackStack("");
+        fragmentTransaction.commit();
     }
 }

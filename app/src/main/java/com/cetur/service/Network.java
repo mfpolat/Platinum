@@ -5,6 +5,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 
+import com.cetur.model.GetDriverDocumentsResponse;
 import com.cetur.model.LoginResponse;
 import com.cetur.model.Person;
 import com.cetur.platinum.Constants;
@@ -22,14 +23,20 @@ import org.ksoap2.transport.HttpTransportSE;
 public class Network {
     private String name, password,isWronCount;
     private Context mContext;
-
-
+    private String documentType;
+    private String token;
     public void login(String userName, String pass, String isWronCount,Context context) {
         name = userName;
         this.password = pass;
         this.isWronCount = isWronCount;
         mContext = context;
         new LoginTask().execute();
+    }
+    public void getDriverDocumentsByType(String accessToken,String documentType,Context context){
+        this.documentType = documentType;
+        this.token = accessToken;
+        this.mContext = context;
+
     }
 
     private class LoginTask extends AsyncTask<Void, Void, LoginResponse> {
@@ -93,6 +100,57 @@ public class Network {
         protected void onPostExecute(LoginResponse response) {
             dialog.dismiss();
             ((LoginActivity)mContext).OnLoginResponseRecieved(response);
+            super.onPostExecute(response);
+        }
+    }
+    private class GetDriverDocumentsTask extends AsyncTask<Void,Void,GetDriverDocumentsResponse>{
+        ProgressDialog dialog = new ProgressDialog(mContext);
+
+        @Override
+        protected void onPreExecute() {
+            dialog.setCancelable(false);
+            dialog.setMessage(mContext.getString(R.string.loading));
+            dialog.show();
+        }
+
+        @Override
+        protected GetDriverDocumentsResponse doInBackground(Void... params) {
+
+            GetDriverDocumentsResponse response = new GetDriverDocumentsResponse();
+            SoapObject request = new SoapObject(Constants.NAME_SPACE, Constants.GET_DRIVER_DOCUMENT_INFO);
+            request.addProperty("token", token);
+            request.addProperty("documentType", documentType);
+            SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
+            envelope.setOutputSoapObject(request);
+            envelope.dotNet = true;
+            try {
+                HttpTransportSE androidHttpTransport = new HttpTransportSE(Constants.SERVICE_BASE_URL);
+                androidHttpTransport.call(Constants.LOGIN_SERVICE_SOAP_ACTION, envelope);
+                SoapObject result = (SoapObject) envelope.bodyIn;
+                if (result != null) {
+                    Log.i("Network Response :   " ,result.toString());
+                    SoapObject loginResult = (SoapObject) result.getProperty("v2_getDriverDocumentInfosResult");
+                    response.setCode(loginResult.getProperty("code").toString());
+                    response.setMessage(loginResult.getProperty("message").toString());
+                    response.setDescription(loginResult.getProperty("description").toString());
+                    if (response.getCode().equals("0")) {
+
+                        return response;
+                    }
+                    else{
+                        return response;
+                    }
+                } else {
+                    return null;
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(GetDriverDocumentsResponse response) {
             super.onPostExecute(response);
         }
     }
